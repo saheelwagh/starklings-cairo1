@@ -92,4 +92,15 @@ infra
     starkscan like etherscan
 
     https://www.dynamic.xyz/?utm_source=dappland web3 login flows
-    
+
+https://dmail.ai/
+
+https://www.starknet-ecosystem.com/en/jobs good job potential on starknet
+but job listings are months old also 
+e
+repone trhis
+https://www.landa.as/en/?ref=lapaninja
+https://en.weareroof.com/?ref=lapaninja
+https://format.furniture/?ref=lapaninja
+https://www.giopatocoombes.com/?ref=lapaninja
+https://www.fsuite.co/?ref=lapaninja
