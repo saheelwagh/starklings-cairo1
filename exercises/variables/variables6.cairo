@@ -5,7 +5,7 @@
 use debug::PrintTrait;
 
 const NUMBER = 3;
-const SMALL_NUMBER = 3_u8;
+const SMALL_NUMBER: felt252 = 3;
 fn main() {
     NUMBER.print();
     SMALL_NUMBER.print();
