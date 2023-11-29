@@ -3,8 +3,6 @@
 // The contract shows that he is the owner of the contract.
 // However, his contract is not working. What's he missing?
 
-// I AM NOT DONE
-
 #[starknet::interface]
 trait IJoesContract<TContractState> {
     fn get_owner(self: @TContractState) -> felt252;
@@ -12,16 +10,17 @@ trait IJoesContract<TContractState> {
 
 #[starknet::contract]
 mod JoesContract {
+use starknet::get_caller_address;
+    use starknet::ContractAddress;
     #[storage]
     struct Storage {}
-
+    #[external(v0)]
     impl IJoesContractImpl of super::IJoesContract<ContractState> {
         fn get_owner(self: @ContractState) -> felt252 {
             'Joe'
         }
     }
 }
-
 #[cfg(test)]
 mod test {
     use array::ArrayTrait;
@@ -44,7 +43,7 @@ mod test {
         let owner = dispatcher.get_owner();
         assert('Joe' == dispatcher.get_owner(), 'Joe should be the owner.');
     }
-
+    
     fn deploy_contract() -> IJoesContractDispatcher {
         let mut calldata = ArrayTrait::new();
         let (address0, _) = deploy_syscall(
@@ -55,3 +54,4 @@ mod test {
         contract0
     }
 }
+    
